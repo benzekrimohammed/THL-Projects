@@ -1,6 +1,4 @@
-import java.util.Math;
 import java.util.Scanner;
-
 
 class Main {
     static Scanner c = new Scanner(System.in);
@@ -14,13 +12,11 @@ class Main {
 
     }
     public static boolean prime(int num) {
-        if (num<0||num%2==0)
-            return false;
         double r=Math.sqrt(num);
-        if(r != Math.floor(r)){
-            System.out.println(Math.floor(r));
-            for(int i=2;i<Math.floor(r)+1;i++){
-                if(r%i==0)
+        int p=(int)Math.floor(r);
+        if(r != p){
+            for(int i=2;i<p+1;i++){
+                if(num%i==0)
                     return false;
             }
             return true;
